@@ -1,0 +1,43 @@
+body {
+    background-color: grey;
+}
+
+/* #nav{
+    width:100%;
+    margin: 0px;
+    height: 2%;
+    color: #C7EFCF;
+  
+} */
+
+#container {
+    width:100%;
+    color: #C7EFCF;
+    text-align: center;
+}
+
+#articles {
+    display: inline-block;
+    overflow: auto;
+    width: 60%;
+    height: 700px;
+    background-color: #C7EFCF;
+  }
+  
+#notes {
+    float: right;
+    width: 30%;
+}
+textarea, input {
+    display: block;
+    width: 100%;
+    background-color: #FCF5C7;
+}
+input {
+    height: 36px;
+    font-size: 24px;
+}
+textarea {
+    height: 200px;
+    font-size: 18px;
+}
