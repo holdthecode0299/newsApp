@@ -10,15 +10,16 @@ var axios = require("axios");
 // require models
 var db = require("./models");
 
-var PORT = 3000;
+var PORT = process.env.PORT || 3000;
 
  
 
 // Initialize express
 var app = express(); 
 
-// Use morgan logger for logging requests
-app.use(logger("dev"));
+// Require routes
+var routes = require("./routes"); 
+
 // Parse request body as JSON
 app.use(express.urlencoded({ extended: true })); 
 app.use(express.json()); 
