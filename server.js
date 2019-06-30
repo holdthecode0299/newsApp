@@ -3,9 +3,6 @@ var express = require("express");
 var logger = require("morgan");
 var mongoose = require("mongoose");
 
-// Scraping dependencies
-var cheerio = require("cheerio");
-var axios = require("axios");
 
 // require models
 var db = require("./models");
@@ -26,8 +23,13 @@ app.use(express.json());
 // Make public a static folder
 app.use(express.static("public")); 
 
+// Requests going through routes
+app.use(routes);
+
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/newsdb";
+
 // Connect to the Mongo DB; using local DB
-mongoose.connect("mongodb://localhost/newsdb", { useNewUrlParser: true }); 
+mongoose.connect("MONGODB_URI"); 
 
 // ROUTES
 
